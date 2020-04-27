@@ -1,9 +1,9 @@
 from cartas import crea_baraja
 #import cartas
 
-baraja1 = crea_baraja()
-baraja2 = crea_baraja()
+b1 = crea_baraja()
+b2 = crea_baraja()
 
-print(baraja1)
-print(baraja2)
+print(b1)
+print(b2)
 
