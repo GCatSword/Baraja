@@ -6,6 +6,9 @@ class Baraja():
 
 
     def __init__(self):
+        self.__crea_baraja__()
+
+    def __crea_baraja__(self):
         self.mano = []
         self.naipes = []
         for palo in self.palos:
@@ -32,6 +35,5 @@ class Baraja():
                 carta = self.naipes.pop(0)
                 self.mano[ij].append(carta)
         
-
-    def invertir(self):
-        pass
+    def recoger(self):
+        self.__crea_baraja__()

@@ -1,11 +1,5 @@
-import cartas
+import ccartas
 
-b = cartas.crea_baraja()
+b = ccartas.Baraja()
 
-print(cartas.invertir(b))
 
-manos = cartas.repartir(b, 3, 5)
-
-cartas.mezclar(b)
-
-print(manos)
