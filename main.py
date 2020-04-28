@@ -1,9 +1,11 @@
-from cartas import crea_baraja
-#import cartas
+import cartas
 
-b1 = crea_baraja()
-b2 = crea_baraja()
+b = cartas.crea_baraja()
 
-print(b1)
-print(b2)
+print(cartas.invertir(b))
 
+manos = cartas.repartir(b, 3, 5)
+
+cartas.mezclar(b)
+
+print(manos)
