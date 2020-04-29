@@ -1,11 +1,11 @@
 import random
 
-palos = ('o','c','e','b')
-cartas = ('A','2','3','4','5','6','7','S','C','R')
- 
-def crea_baraja():
-    baraja = []
+palos = ('o', 'c', 'e', 'b')
+cartas = ('A', '2', '3', '4', '5', '6', '7', 'S', 'C', 'R')
 
+def crea_baraja():
+
+    baraja = []
     for palo in palos:
         for carta in cartas:
             naipe = carta + palo
@@ -15,20 +15,18 @@ def crea_baraja():
 
 def mezclar(b):
     br = []
-    #i = 0
-    #while i < len(b):
-    while len(br) != len(b):
+    while len(b) != len(br):
         n = random.randint(0,len(b)-1)
         while b[n] in br:
-            n = random.randint(0,len(b)-1)
+            n = random.randint(0, len(b)-1)
         br.append(b[n])
-        #i += 1
     b[:] = br
     return b
- 
-def repartir(b, players, cards):
-    res = []
 
+def repartir(b, players, cards):
+    #res = [[]]*players
+
+    res =[]
     for p in range(players):
         res.append([])
 
@@ -36,6 +34,7 @@ def repartir(b, players, cards):
         for ij in range(players):
             carta = b.pop(0)
             res[ij].append(carta)
+
     return res
 
 def invertir(b):

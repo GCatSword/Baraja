@@ -1,6 +1,5 @@
 import ccartas
 
-b = ccartas.Baraja()
-
-
-
+mi_b = ccartas.Baraja()
+mi_b.mezclar()
+print(mi_b.naipes)
